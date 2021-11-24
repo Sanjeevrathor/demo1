@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-5 mt-5 mx-auto">
+       <div class="card rounded-0">
+           <div class="card-header">
+               <h2 class="mb-0">{{title}} </h2>
+               <button (click)="add()" class="btn btn-primary">Click</button>
+           </div>
+           <div class="card-body">
+              <form [formGroup]="form" (ngSubmit)="logmform()">
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">userid</label>
+                      <input type="text" formControlName="email" name="email" class="form-control">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" formControlName="password" name="password" class="form-control">
+                  </div>
+                  <p>{{message}}</p>
+                  <button type="submit" class="btn btn-primary">Login</button>
+              </form>
+           </div>
+       </div>
+    </div>
+  </div>
